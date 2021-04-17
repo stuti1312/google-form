@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <!-- <meta name="google-signin-client_id" content="582401840202-kfc9qsoa1jjo3tf1tjbjk45187putiru.apps.googleusercontent.com"> -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -29,6 +30,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +41,26 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- <a href="#" onclick="signOut();">Sign out</a>
+    <br>
+    <a href="#" onclick="onSignIn();">Sign In</a>
+<script>
+  function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script> -->
+    
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
   </body>
 </html>
